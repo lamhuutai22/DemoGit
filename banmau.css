@@ -1,0 +1,162 @@
+*{
+margin: 0px;
+padding: 0px;
+font-family: sans-serif;
+}
+
+body{
+background:center;
+background-size: 100%;
+height: 100vh;
+background-image: url("https://thumbs.gfycat.com/HarmoniousUnknownAfghanhound-max-1mb.gif");
+background-repeat:no-repeat
+}
+.container{
+height: 60vh;
+width: 30vw;
+position: absolute;
+top: 50vh;
+left: 50vw;
+transform: translate(-50%, -50%);
+perspective: 1000px;
+}
+.box{
+height: 250px;
+width: 250px;
+position: absolute;
+top: 100px;
+left: 100px;
+/* transform: rotate(-90deg); */
+transform-style: preserve-3d;
+animation: animate 5s infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotateX(45deg) rotateY(-45deg);
+    }
+    25%{
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+    50%{
+        transform: rotateX(45deg) rotateY(45deg);
+    }
+    75%{
+        transform: rotateX(-45deg) rotateY(45deg);
+    }
+    100%{
+        transform: rotateX(45deg) rotateY(-45deg);
+    }
+}
+
+.card{
+height: 250px;
+width: 250px;
+text-align: center;
+padding: 100px 0px;
+color:rgb(255, 255, 255);
+background-image: url("https://thumbs.gfycat.com/TestyDisloyalChinchilla-size_restricted.gif");
+border: 2px solid rgb(99, 236, 7);
+font-size: 32px;
+box-sizing: border-box;
+position: absolute;
+transition: all 1s;
+}
+.card1{
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    padding: 50px 0px;
+    color:rgb(2, 1, 1);
+    background-image: url("https://i.gifer.com/J4o.gif");
+    border-radius: 40%;
+    border: 2px solid rgb(255, 0, 0);
+    font-size: 32px;
+    box-sizing: border-box;
+    position: absolute;
+    transition: all 5s;
+    }
+.card2{
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    padding: 50px 0px;
+    color:rgb(255, 0, 0);
+    background-image: url("https://i.gifer.com/J4o.gif");
+    border-radius: 40%;
+    border: 2px solid rgb(0, 4, 255);
+    font-size: 32px;
+    box-sizing: border-box;
+    position: absolute;
+    transition: all 5s;
+    }
+    .card3{
+        height: 150px;
+        width: 150px;
+        text-align: center;
+        padding: 50px 0px;
+        color:rgb(255, 0, 0);
+        background-image: url("https://i.gifer.com/J4o.gif");
+        border-radius: 40%;
+        border: 2px solid rgb(255, 0, 200);
+        font-size: 32px;
+        box-sizing: border-box;
+        position: absolute;
+        transition: all 5s;
+        }
+#front{
+    transform: translateZ(125px);
+} 
+#back{
+    transform: translateZ(-125px);
+} 
+#left{
+    right: 125px;
+    transform: rotateY(-90deg);
+}
+#right{
+    left: 125px;
+    transform: rotateY(90deg);
+}
+#top{
+    bottom: 125px;
+    transform: rotateX(90deg);
+}
+#bottom{
+    top: 125px;
+    transform: rotateX(-90deg);
+}
+input{
+height: 50px;
+width: 100px;
+background-image: url(https://media2.giphy.com/media/QpVUMRUJGokfqXyfa1/giphy.gif);
+/* border: none; */
+font-size: 15px;
+cursor: pointer;
+position: absolute;
+top: -100px;
+left: -575px;
+color:rgb(255, 255, 255);
+-webkit-animation: my 700ms infinite;
+            -moz-animation: my 700ms infinite; 
+            -o-animation: my 700ms infinite; 
+            animation: my 700ms infinite;
+}
+input:focus~ .box #front{
+    transform: translateZ(180px) rotateY(360deg);
+}
+input:focus~ .box #back{
+    transform: translateZ(-180px) rotateY(360deg);
+}
+input:focus~ .box #left{
+    right: 180px;
+}
+input:focus~ .box #right{
+   left: 180px;
+}
+input:focus~ .box #top{
+    bottom: 180px;
+}
+input:focus~ .box #bottom{
+   top: 180px;
+}
